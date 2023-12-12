@@ -1,14 +1,16 @@
 package main
 
-import (
-	"fmt"
-	"net/http"
-)
+import "fmt"
+
+var version = "dev"
 
 func main() {
-	http.HandleFunc("/", HelloServer)
-	http.ListenAndServe(":8080", nil)
+
+	fmt.Printf("Version: %s\n", version)
+
+	fmt.Println(hello())
 }
-func HelloServer(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "Hello, %s!", r.URL.Path[1:])
+
+func hello() string {
+	return "Hello Glang"
 }
