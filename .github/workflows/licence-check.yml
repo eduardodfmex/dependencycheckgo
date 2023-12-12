@@ -12,5 +12,5 @@ jobs:
     runs-on: ubuntu-latest
     name: License Check
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       - uses: yusufpapurcu/go-license-checker@v0.5
